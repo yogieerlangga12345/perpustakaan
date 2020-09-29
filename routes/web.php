@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('master/customer', 'CustomerController@index');
+Route::get('master/customer/create', 'CustomerController@viewCreate');
+Route::post('master/customer/create/proses', 'CustomerController@store');
+Route::get('master/customer/edit/{id}', 'CustomerController@viewEdit');
+Route::post('master/customer/edit/{id}/proses', 'CustomerController@update');
+Route::get('master/customer/delete/{id}', 'CustomerController@delete');
