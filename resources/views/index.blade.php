@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <link rel="stylesheet" href="{{ asset('assets/lte/plugins/overlayScrollbars/css/overlayScrollbars.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="{{ asset('assets/css/datatables.min.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="sidebar-mini layout-fixed nimbus-is-editor">
@@ -60,6 +61,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('assets/lte/dist/js/adminlte.min.js') }}"></script>
 
 <script src="{{ asset('assets/lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+
+
+<script src="{{ asset('assets/js/datatables.min.js') }}"></script>
 
 @if (!empty($script_footer))
     @include($script_footer)  

@@ -18,9 +18,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('master/customer', 'CustomerController@index');
-Route::get('master/customer/create', 'CustomerController@viewCreate');
-Route::post('master/customer/create/proses', 'CustomerController@store');
-Route::get('master/customer/edit/{id}', 'CustomerController@viewEdit');
-Route::post('master/customer/edit/{id}/proses', 'CustomerController@update');
-Route::get('master/customer/delete/{id}', 'CustomerController@delete');
+Route::get('master/buku', 'CustomerController@index');
+Route::get('master/buku/create', 'CustomerController@viewCreate');
+Route::post('master/buku/create/proses', 'CustomerController@store');
+Route::get('master/buku/edit/{id}', 'CustomerController@edit');
+Route::put('master/buku/edit/{id}/proses', 'CustomerController@update');
+Route::get('master/buku/delete/{id}', 'CustomerController@delete');

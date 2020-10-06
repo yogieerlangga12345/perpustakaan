@@ -21,7 +21,7 @@ class CreateMsbukusTable extends Migration
             $table->string('penerbit_buku');
             $table->date('tahun_terbit');
             $table->integer('stok');
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
