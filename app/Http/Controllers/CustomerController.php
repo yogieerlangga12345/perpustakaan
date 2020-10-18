@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\msbuku;
+use App\Buku;
 
 class CustomerController extends Controller
 {
@@ -22,7 +22,7 @@ class CustomerController extends Controller
         $data['link'] = $this->link;
         $data['content'] = $this->getView('CustomerView');
         $data['script_footer'] = $this->getView('scriptfooter');
-        $data['data'] = msbuku::all();
+        $data['data'] = Buku::all();
 
         return view('index', $data);
     }

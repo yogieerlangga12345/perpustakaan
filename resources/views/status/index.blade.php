@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('title', 'Data Kategori')
+@section('title', 'Data Status')
 
 @section('content')
 <section class="content">
@@ -9,9 +9,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">Data Kategori</h2>
+                        <h2 class="card-title">Data Status</h2>
                         <div class="card-tools">
-                            <a href="{{ route('createKategori') }}" class="btn btn-primary btn-sm float-right" type="button">
+                            <a href="{{ route('createStatus') }}" class="btn btn-primary btn-sm float-right" type="button">
                                 <i class="fa fa-plus"></i> Add
                             </a>
                         </div>
@@ -30,12 +30,12 @@
                                 @foreach ($data as $db)
                                     <tr>
                                         <td>{{ $no }}</td>
-                                        <td>{{ $db->namaKategori }}</td>
+                                        <td>{{ $db->namaStatus }}</td>
                                         <td>
                                             <div>
-                                                <a href="{{ route('editKategori', ['id' => $db->id]) }}" class="btn btn-primary">Edit</a> | 
-                                                <a href="#" class="btn btn-danger" onclick="confirm('Apakah anda ingin menghapus data ini?') ? document.querySelector('#deleteKategori{{$db->id}}').submit() : ''">Delete</a>
-                                                <form action="{{ route('deleteKategori', ['id' => $db->id]) }}" id="deleteKategori{{$db->id}}" method="POST">
+                                                <a href="{{ route('editStatus', ['id' => $db->id]) }}" class="btn btn-primary">Edit</a> | 
+                                                <a href="#" class="btn btn-danger" onclick="confirm('Apakah anda ingin menghapus data ini?') ? document.querySelector('#deleteStatus{{$db->id}}').submit() : ''">Delete</a>
+                                                <form action="{{ route('deleteStatus', ['id' => $db->id]) }}" id="deleteStatus{{$db->id}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>

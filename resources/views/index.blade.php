@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | Starter</title>
+  <title>@yield('title')</title>
 
   <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
 
@@ -37,9 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    @if (!empty($content))
-      @include($content)
-    @endif
+    @yield('content')
   </div>
   <!-- /.content-wrapper -->
 
@@ -64,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 <script src="{{ asset('assets/js/datatables.min.js') }}"></script>
-
+@yield('script')
 @if (!empty($script_footer))
     @include($script_footer)  
 @endif
