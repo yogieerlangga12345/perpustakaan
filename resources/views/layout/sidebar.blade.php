@@ -30,6 +30,30 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('indexRole') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Role
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('indexKategori') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Kategori
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('indexStatus') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Status
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
