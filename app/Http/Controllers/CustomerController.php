@@ -8,14 +8,6 @@ use App\msbuku;
 
 class CustomerController extends Controller
 {
-    protected $file = 'master/customer';
-    protected $link = 'master/buku';
-
-    public function getView($parm = null)
-    {
-        return is_null($parm) ? $this->file : sprintf('%s/%s', $this->file, $parm);
-    }
-
     public function index()
     {
         $data = [];
