@@ -8,6 +8,10 @@ class Buku extends Model
 {
     protected $table = "buku";
     public $timestamps = false;
+    protected $primaryKey = "id";
+    protected $casts = [
+        'id' => 'string'
+      ];
 
     public function status(){
         return $this->belongsTo("App\StatusBuku","idStatus");

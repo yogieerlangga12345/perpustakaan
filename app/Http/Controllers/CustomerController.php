@@ -4,17 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\msbuku;
+use App\Buku;
 
 class CustomerController extends Controller
 {
+    protected $file = 'master/customer';
+    protected $link = 'master/buku';
+
+    public function getView($parm = null)
+    {
+        return is_null($parm) ? $this->file : sprintf('%s/%s', $this->file, $parm);
+    }
+
     public function index()
     {
         $data = [];
         $data['link'] = $this->link;
         $data['content'] = $this->getView('CustomerView');
         $data['script_footer'] = $this->getView('scriptfooter');
-        $data['data'] = msbuku::all();
+        $data['data'] = Buku::all();
 
         return view('index', $data);
     }
