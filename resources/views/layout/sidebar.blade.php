@@ -15,10 +15,18 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ asset('master/buku') }}" class="nav-link">
+            <a href="{{ route('indexBuku') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Buku
+                Data Buku
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('indexPengguna') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Pengguna
               </p>
             </a>
           </li>

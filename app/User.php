@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    public $timestamps = false;
  
     public function role(){
         return $this->belongsTo('App\Role', 'idRole');
